@@ -1,0 +1,27 @@
+  <% if user_signed_in? %>
+  
+  <center>
+    <% @match.each do |user| %>
+      <tr>
+        <h3><td>Attends <%= user.school %></td></br></h3>
+        <td><%= image_tag user.image.url(:medium) %></td>
+        </br></br></br>
+        </tr>
+     <% end %>
+     </br>
+     </br>
+     <p>
+  <button class="btn btn-large btn-danger" type="button">Won't Hit Dat</button>
+  <button class="btn btn-large btn-success" type="button">I'd Hit dat</button>
+</p>
+  </center>
+  
+  
+</div>
+<% else %>
+<div class="page-header">
+  <center></br></br></br><h1>Tinder</h1>
+  			<h4>...meet yo' girl 'n shit.</h4></center>
+</div>
+<% end %>
+

@@ -1,0 +1,35 @@
+<h2>Sign Up</h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email %></div>
+  
+  <div><%= f.label 'Upload your image' %><br />
+  <%= f.file_field :image %><br /></div>
+  
+    <!--<div><%= f.label 'Interested in' %><br />
+  <%= f.text_field :sex, :placeholder => "M/F" %></div>-->
+    <div><%= f.label 'Interested in:' %><br />
+    <div class="btn-group" data-toggle="buttons-radio">
+    <button type="button" class="btn btn-primary <% if defined?(current_user.sex) && current_user.sex == 'M' %>active<% end %>" data-gender="M">Dudes</button>
+    <button type="button" class="btn btn-primary <% if defined?(current_user.sex) && current_user.sex == 'F' %>active<% end %>" data-gender="F">Pretty Young Thangs</button>
+  </div>
+  
+  <input type="hidden" name="user[sex]"></input> <!--for j query shit-->
+
+   <div><%= f.label "School", :class => 'control-label' %>
+     <%= f.text_field :school, :placeholder => "Guanjo Universitay", :class => 'text_field' %>
+    </div>
+  
+  <div><%= f.label :password %><br />
+  <%= f.password_field :password %></div>
+  
+  <div><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></div>
+
+  <div><%= f.submit "Sign up" %></div>
+<% end %>
+
+<%= render "devise/shared/links" %>
