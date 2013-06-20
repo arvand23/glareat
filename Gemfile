@@ -5,16 +5,16 @@ gem 'rails', '3.2.11'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem 'devise'
+gem 'bootstrap-sass', '~> 2.3.2.0'
+gem "paperclip", "~> 3.0"
+
 group :production do
   gem 'pg'
 end
 group :development, :test do
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.3.0', :require => 'sqlite3'
 end
-
-gem 'devise'
-gem 'bootstrap-sass', '~> 2.3.2.0'
-gem "paperclip", "~> 3.0"
 
 
 # Gems used only for assets and not required
