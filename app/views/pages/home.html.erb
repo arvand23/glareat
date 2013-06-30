@@ -3,7 +3,7 @@
   <center>
         <% @match.each do |user| %>
           <h3><td>Attends <%= user.school %></td></br></h3>
-          <h3><td>SEX is <%= user.sex %></td></br></h3>
+          <!--<h3><td>SEX is <%= user.sex %></td></br></h3>-->
           <td><%= image_tag user.image.url(:medium) %></td>
           </br>
         <% end %>
