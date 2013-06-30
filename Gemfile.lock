@@ -136,7 +136,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass (~> 2.3.2.0)
   coffee-rails (~> 3.2.1)
-  debugger
+  debugger (~> 1.6.0)
   devise
   jquery-rails
   mysql2
