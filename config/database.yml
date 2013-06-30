@@ -21,9 +21,11 @@ test:
   timeout: 5000
 
 production:
-  adapter: postgresql
-  host: localhost
-  username: user
-  database: app-dev
+  adapter: mysql2
+  encoding: utf8
+  database: tinder_db
+  user: root
   pool: 5
   timeout: 5000
+
+
