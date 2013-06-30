@@ -8,7 +8,6 @@ gem 'rails', '3.2.11'
 gem 'devise'
 gem 'bootstrap-sass', '~> 2.3.2.0'
 gem "paperclip", "~> 3.0"
-gem 'debugger'
 gem 'mysql2'
 
 group :production do
@@ -16,6 +15,7 @@ group :production do
 end
 group :development, :test do
   gem 'sqlite3', '~> 1.3.0', :require => 'sqlite3'
+  gem 'debugger', "~> 1.6.0"
 end
 
 
