@@ -1,26 +1,23 @@
-  <% if user_signed_in? %>
+<% if user_signed_in? %>
   
   <center>
-    <% @match.each do |user| %>
-      <tr>
-        <h3><td>Attends <%= user.school %></td></br></h3>
-        <td><%= image_tag user.image.url(:medium) %></td>
-        </br>
-        </tr>
-     <% end %>
-     </br>
-     <p>
-  <button class="btn btn-large btn-danger" type="button">Won't Hit Dat</button>
-  <button class="btn btn-large btn-success" type="button">I'd Hit dat</button>
-</p>
+        <% @match.each do |user| %>
+          <h3><td>Attends <%= user.school %></td></br></h3>
+          <h3><td>SEX is <%= user.sex %></td></br></h3>
+          <td><%= image_tag user.image.url(:medium) %></td>
+          </br>
+        <% end %>
+          </br>
+          <p>
+            <button class="btn btn-large btn-danger" type="button">Broccoli</button>
+            <button class="btn btn-large btn-success" type="button">Cheesecake</button>
+          </p>
   </center>
-  
-  
-</div>
 <% else %>
-<div class="page-header">
-  <center></br></br></br><h1>Tinder</h1>
-  			<h4>...meet yo' girl 'n shit.</h4></center>
-</div>
+    <div class="page-header">
+        <center></br><h1>LetsCheesecake</h1></br>
+  			 <h4>Meet sweet new people at your school.</h4></center>
+    </div>
 <% end %>
+
 

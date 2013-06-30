@@ -22,13 +22,15 @@
   
   
   </br>
+
   <div class="btn-group" data-toggle="buttons-radio">
-    <button type="button" class="btn btn-primary <% if defined?(current_user.sex) && current_user.sex == 'M' %>active<% end %>" data-gender="M">Dude</button>
-    <button type="button" class="btn btn-primary <% if defined?(current_user.sex) && current_user.sex == 'F' %>active<% end %>" data-gender="F">Pretty Young Thang</button>
+    <button type="button" class="btn btn-primary <% if defined?(current_user.sex) && current_user.sex == 'M' %>active<% end %>" data-gender="M">Guy</button>
+    <button type="button" class="btn btn-primary <% if defined?(current_user.sex) && current_user.sex == 'F' %>active<% end %>" data-gender="F">Girl</button>
   </div>
   
-  <input type="hidden" name="user[sex]"></input> <!--for j query shit-->
-  
+  <input type="hidden" name="user[sex]" <% if defined?(current_user.sex) %> value="<%= current_user.sex %>" <% end %> ></input> <!--for j query shit--><!-- the if defined fixed the issue of validatione errors when editing other values and not touching sex. fixed it
+  because its saying if its already defined pull that data -->
+
 </br>
 
   <div><%= f.label :email %><br />

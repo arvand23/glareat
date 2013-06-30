@@ -8,6 +8,8 @@ gem 'rails', '3.2.11'
 gem 'devise'
 gem 'bootstrap-sass', '~> 2.3.2.0'
 gem "paperclip", "~> 3.0"
+gem 'debugger'
+gem 'mysql2'
 
 group :production do
   gem 'pg'

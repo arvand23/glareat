@@ -3,13 +3,22 @@ class PagesController < ApplicationController
 
 
   def home
-  @match = User.order("RANDOM()").limit(1)
+    if current_user.present?
+      @bro = current_user.school
+      if current_user.sex == "M"
+        @match = User.where(sex: "F").where(school: @bro).limit(1)
+      elsif 
+        @match = User.where(sex: 'M').where(school: @bro).limit(1)
+      end
+    else
 
-    respond_to do |format|
-      format.html # home.html.erb
-      format.json { render json: @users }
     end
+
+
+
   end
+
+
 
 
 
